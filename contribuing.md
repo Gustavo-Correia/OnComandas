@@ -11,6 +11,12 @@ Obrigado por querer contribuir. Este documento descreve o fluxo mínimo para Iss
   - Logs / stack traces / versão do PHP / ambiente (Docker / local).
 
 ## 2. Branches e convenções
+-criação de branch
+  git checkout main
+  git fetch
+  git pull
+  git checkout -b feature/teste-fechamento-issue
+  git push -u origin feature/teste-fechamento-issue
 - Branches principais:
   - `main` — código em produção.
   - `develop` — integração de features (se usado).

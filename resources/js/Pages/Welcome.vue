@@ -128,16 +128,25 @@ const currentYear = new Date().getFullYear()
 <template>
   <div class="min-h-screen">
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <!-- Background with overlay -->
-      <div class="absolute inset-0 z-0">
-        <img
-          src="../../assets/hero-bg.jpg"
-          alt="Restaurant background"
-          class="w-full h-full object-cover opacity-20"
-        />
-        <div class="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black" />
+      <div class="absolute top-0 right-0 z-50 p-6">
+            <nav class="flex items-center justify-end gap-3">
+                    <a
+                        href="/login"
+                        class="inline-block px-6 py-2.5 text-white/90 bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 hover:border-white/30 rounded-lg text-sm font-medium transition-all duration-300"
+                    >
+                        Entrar
+                    </a>
+                    <a
+                        href="/register"
+                        class="inline-block px-6 py-2.5 text-white bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 border border-transparent rounded-lg text-sm font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
+                    >
+                        Cadastrar
+                    </a>  
+            </nav>
       </div>
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        
+      
 
       <!-- Gradient orbs -->
       <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float" />
@@ -156,9 +165,9 @@ const currentYear = new Date().getFullYear()
 
            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             Transforme seu
-            <span className="block bg-gradient-hero bg-clip-text text-transparent">
-              atendimento digital
-            </span>
+           <span class="block bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent text-4xl md:text-6xl font-bold">
+            atendimento digital
+          </span>
           </h1>
           <p class="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto">
             Sistema completo de comandas para restaurantes, bares e cafés. Gerencie pedidos, pagamentos e relatórios em tempo real.
@@ -235,7 +244,7 @@ const currentYear = new Date().getFullYear()
         <div class="text-center mb-16 animate-fade-in">
           <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">
             Como funciona o
-            <span class="block text-secondary">OnComandas</span>
+            <span class="block text-secondary">On<span class=" text-red-500">C</span>omandas</span>
           </h2>
           <p class="text-xl text-gray-400 max-w-2xl mx-auto">
             Sistema simples e eficiente para otimizar seu atendimento

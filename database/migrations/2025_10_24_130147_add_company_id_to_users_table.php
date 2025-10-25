@@ -12,7 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->foregnId('company_id')->nullable()->constrained('companies')->onDelete('cascade')->after('id');
+            // CORRETO: foreignId (com "i" no final)
+            $table->foreignId('company_id')
+                ->nullable()
+                ->constrained('companies')
+                ->onDelete('cascade')
+                ->after('id');
+            
             $table->softDeletes();
         });
     }
@@ -25,6 +31,7 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->dropForeign(['company_id']);
             $table->dropColumn('company_id');
+            $table->dropSoftDeletes(); // Também adicionar para remover softDeletes
         });
     }
 };

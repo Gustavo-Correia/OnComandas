@@ -3,7 +3,8 @@
 <!-- HEADER STYLE: CLASSIC -->
 <div align="center">
 
-<img src="readmeai/assets/logos/purple.svg" width="30%" style="position: relative; top: 0; right: 0;" alt="Project Logo"/>
+<span style="display: block; color: #6b7280;">On<span style="color: #ef4444;">C</span>omandas</span>
+
 
 # ONCOMANDAS
 

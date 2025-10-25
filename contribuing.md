@@ -64,7 +64,7 @@ Com Docker Compose (recomendado):
   - docker-compose exec app cp .env.example .env
   - docker-compose exec app php artisan key:generate
 - Executar migrations:
-  - 
+  - docker-compose exec app php artisan migrate
 - Rodar migrations com seed:
   - docker-compose exec app php artisan migrate --seed
 - Refazer todas migrations:
@@ -73,6 +73,8 @@ Com Docker Compose (recomendado):
   - docker-compose exec app php artisan migrate:rollback
 - Criar nova migration:
   - docker-compose exec app php artisan make:migration create_\<table\>_table --create=\<table\>
+- Dropar o banco e criar novas migrations copulando elas
+  -docker compose exec app php artisan migrate:fresh --seed
 
 Sem Docker (local):
 - composer install
